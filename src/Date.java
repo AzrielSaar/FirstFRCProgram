@@ -4,7 +4,7 @@ public class Date {
     private int m_year;
     
     Date(int day, int month, int year){
-        if(isValidDate(day, month, year) == false){
+        if(!isValidDate(day, month, year)){
             m_day = 1;
             m_month = 1;
             m_year = 2000;
@@ -35,7 +35,8 @@ public class Date {
        }
        return true;
     }
-    
+
+    @Override
     public String toString(){
         return (m_day + "/" + m_month + "/" + m_year);
     }
@@ -59,5 +60,18 @@ public class Date {
     }
 
     //public void addDays(int num){}
-    
+
+    public int getDay() {
+        return m_day;
+    }
+
+    public int getMonth() {
+        return m_month;
+    }
+
+    public int getYear() {
+        return m_year;
+    }
+
+
 }
