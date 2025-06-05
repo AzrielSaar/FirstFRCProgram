@@ -68,7 +68,7 @@ public class Baby {
     public boolean equals(Baby baby){
         if(m_name == baby.m_name && m_id == baby.m_id && m_birthDate.equals(baby.m_birthDate)) {
             return true;
-        }else{
+        } else{
             return false;
         }
     }
@@ -90,5 +90,23 @@ public class Baby {
         m_currentWeight = new Weight(kg, currentGrams);
     }
 
+    int YEAR = 365;
+    int MONTH = 30;
+    int WEEK = 7;
+
+    /*public int isWeightInValidRange(Date date){
+        if(date.before(m_birthDate) == true){
+            return 1;
+        }
+        Date oneYearOld = m_birthDate;
+        oneYearOld.addDays(YEAR);
+        if(date.before(oneYearOld) == true){
+            return 2;
+        }
+        Date growth = m_birthDate;
+        growth.addDays(WEEK);
+
+        //TODO!!! add return 3 and return 4 conditions
+    }*/
 
 }
